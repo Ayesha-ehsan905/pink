@@ -112,7 +112,10 @@ export const ProblemSolutionsOverviewSection = (): JSX.Element => {
       </header>
 
       {problemsData.map((problem, index) => (
-        <div key={index} className="flex flex-col gap-8 md:gap-20 pb-6 md:pb-10 w-full">
+        <div
+          key={index}
+          className="flex flex-col gap-8 md:gap-20 pb-6 md:pb-10 w-full"
+        >
           <Separator className="h-0.5 bg-white/10" />
 
           <div className="flex flex-col lg:flex-row items-start gap-6 md:gap-10 py-0.5 w-full">

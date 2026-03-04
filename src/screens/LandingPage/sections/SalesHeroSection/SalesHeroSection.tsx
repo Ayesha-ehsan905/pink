@@ -40,7 +40,6 @@ export const SalesHeroSection = () => {
               alt="Pink3 Logo"
               src="/images/Logo.png"
             />
-            
           </div>
 
           <NavigationMenu className="hidden lg:flex flex-1">
@@ -71,7 +70,7 @@ export const SalesHeroSection = () => {
 
       <div className="relative flex flex-col gap-8 md:gap-14 px-4 md:px-8 lg:px-[120px] py-0 w-full items-center">
         <div className="flex flex-col items-center justify-center gap-12 md:gap-[72px]  px-0 w-full">
-          <div className="inline-flex flex-col items-center gap-6 md:gap-8  pt-8 md:pt-20 lg:pt-[220px] " >
+          <div className="inline-flex flex-col items-center gap-6 md:gap-8  pt-8 md:pt-20 lg:pt-[220px] ">
             <div className="inline-flex items-center justify-center pb-0 px-0">
               <h1 className="flex items-center justify-center max-w-[970px] px-4 text-3xl md:text-5xl lg:text-6xl  font-bold  text-white text-center leading-[82px] tracking-[-0.002em] ">
                 Close More Deals, Faster &amp; Have Less Deal Slippage

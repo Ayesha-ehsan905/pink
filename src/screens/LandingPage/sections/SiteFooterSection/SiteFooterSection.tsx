@@ -31,7 +31,11 @@ export const SiteFooterSection = (): JSX.Element => {
         <div className="flex flex-col lg:flex-row w-full max-w-[1280px] items-start gap-8 lg:gap-20">
           <div className="flex flex-col w-full lg:w-[330px] items-start gap-3">
             <div className="flex items-center gap-2 w-full">
-              <img className="w-9 h-8 md:w-11 md:h-10" alt="Vectors" src="/vectors-1.svg" />
+              <img
+                className="w-9 h-8 md:w-11 md:h-10"
+                alt="Vectors"
+                src="/vectors-1.svg"
+              />
               <h2 className="text-2xl md:text-[length:var(--heading-bold32-font-size)] font-heading-bold32 font-[number:var(--heading-bold32-font-weight)] text-[#ff2f92] tracking-[var(--heading-bold32-letter-spacing)] leading-[var(--heading-bold32-line-height)] whitespace-nowrap [font-style:var(--heading-bold32-font-style)]">
                 Pink3
               </h2>

@@ -1,4 +1,7 @@
-import { CircleCheck as CheckCircle2Icon, Circle as XCircleIcon } from "lucide-react";
+import {
+  CircleCheck as CheckCircle2Icon,
+  Circle as XCircleIcon,
+} from "lucide-react";
 import { Badge } from "../../../../components/ui/badge";
 import { Button } from "../../../../components/ui/button";
 import { Card, CardContent } from "../../../../components/ui/card";
@@ -160,7 +163,10 @@ export const PricingPlansSection = (): JSX.Element => {
 
             <div className="flex flex-col gap-3 md:gap-4">
               {plan.features.map((feature, featureIndex) => (
-                <div key={featureIndex} className="flex items-start gap-2 md:gap-3">
+                <div
+                  key={featureIndex}
+                  className="flex items-start gap-2 md:gap-3"
+                >
                   {feature.included ? (
                     <CheckCircle2Icon className="w-4 h-4 md:w-5 md:h-5 text-white flex-shrink-0 mt-0.5" />
                   ) : (

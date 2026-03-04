@@ -11,8 +11,8 @@ export const LandingPage = () => {
   return (
     <main className="flex flex-col w-full">
       <SalesHeroSection />
-       <UserTestimonialsSection />
-     {/* <ProblemSolutionsOverviewSection />
+      <UserTestimonialsSection />
+      {/* <ProblemSolutionsOverviewSection />
       <ProductBenefitsSection />
       <PricingPlansSection />
       <FrequentlyAskedQuestionsSection />

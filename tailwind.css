@@ -1,24 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0B0B0F;
+  --background: #0b0b0f;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-primary: #ffffff;
-  --color-secondary: #B3B3C0;
-  --color-pink: #FF2F92;
-  --color-error: #FF4D4F;
-  --color-card-border: #24242C;
-  --card-gradient: 180deg, rgba(132, 135, 142, 0.08) 32.3%, rgba(37, 38, 40, 0.08) 74.54%;
-
+  --color-secondary: #b3b3c0;
+  --color-pink: #ff2f92;
+  --color-error: #ff4d4f;
+  --color-card-border: #24242c;
+  --card-gradient:
+    180deg, rgba(132, 135, 142, 0.08) 32.3%, rgba(37, 38, 40, 0.08) 74.54%;
 
   /* background: linear-gradient(180deg, rgba(132, 135, 142, 0.08) 32.3%, rgba(37, 38, 40, 0.08) 74.54%); */
-
 }
-
-
 
 body {
   font-family: "DM Sans", sans-serif;
@@ -27,7 +24,6 @@ body {
 
   overflow-x: hidden;
 }
-
 
 .animate-fade-in {
   animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
@@ -100,7 +96,6 @@ body {
 }
 
 @keyframes shimmer {
-
   0%,
   90%,
   to {
@@ -142,6 +137,5 @@ body {
 @media (min-width: 1200px) and (max-width: 1900px) {
   .container {
     padding-inline: 80px;
-
   }
 }

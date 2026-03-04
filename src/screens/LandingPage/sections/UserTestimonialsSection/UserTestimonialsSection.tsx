@@ -190,9 +190,7 @@ export const UserTestimonialsSection = () => {
       <div className="mt-6 flex items-center justify-center gap-7">
         <button
           type="button"
-          onClick={() =>
-            setActiveIndex((current) => Math.max(0, current - 1))
-          }
+          onClick={() => setActiveIndex((current) => Math.max(0, current - 1))}
           disabled={!canGoPrev}
           className={`flex h-[64px] w-[64px] items-center justify-center rounded-full border border-white text-white transition-colors ${
             !canGoPrev
@@ -220,8 +218,6 @@ export const UserTestimonialsSection = () => {
           <MoveRight className="h-7 w-7  " />
         </button>
       </div>
-
-     
     </section>
   );
 };
