@@ -9,7 +9,12 @@
   --color-primary: #ffffff;
   --color-secondary: #B3B3C0;
   --color-pink: #FF2F92;
+  --color-error: #FF4D4F;
+  --color-card-border: #24242C;
+  --card-gradient: 180deg, rgba(132, 135, 142, 0.08) 32.3%, rgba(37, 38, 40, 0.08) 74.54%;
 
+
+  /* background: linear-gradient(180deg, rgba(132, 135, 142, 0.08) 32.3%, rgba(37, 38, 40, 0.08) 74.54%); */
 
 }
 
