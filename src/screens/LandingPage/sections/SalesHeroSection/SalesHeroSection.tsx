@@ -1,4 +1,5 @@
 import { Button } from "../../../../components/ui/button";
+import { MobileHeader } from "./MobileHeader";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -29,7 +30,9 @@ export const SalesHeroSection = () => {
         src="/images/HeroSectionBg.png"
       />
 
-      <header className="relative flex flex-col w-full justify-center gap-2.5 px-4 md:px-8 lg:px-[120px] py-3 border-b [border-bottom-style:solid] border-transparent [border-image:linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(255,255,255,1)_50%,rgba(255,255,255,0)_100%)_1]">
+      <MobileHeader />
+
+      <header className="relative hidden lg:flex flex-col w-full justify-center gap-2.5 px-4 md:px-8 lg:px-[120px] py-3 border-b [border-bottom-style:solid] border-transparent [border-image:linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(255,255,255,1)_50%,rgba(255,255,255,0)_100%)_1]">
         <div className="flex w-full items-center justify-between gap-4 md:gap-8 lg:gap-12 px-0 py-3 md:py-5">
           <div className="inline-flex items-center gap-2 md:gap-3">
             <img
