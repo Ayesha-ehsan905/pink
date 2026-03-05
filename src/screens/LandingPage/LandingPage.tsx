@@ -15,8 +15,8 @@ export const LandingPage = () => {
         <UserTestimonialsSection />
         <ProblemSolutionsOverviewSection />
         <ProductBenefitsSection />
-        {/* <PricingPlansSection />
-      <FrequentlyAskedQuestionsSection />
+         <PricingPlansSection />
+      {/*<FrequentlyAskedQuestionsSection />
       <TrialOfferSection />
       <SiteFooterSection /> */}
       </main>

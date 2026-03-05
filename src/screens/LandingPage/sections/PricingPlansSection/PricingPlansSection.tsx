@@ -95,9 +95,9 @@ const pricingPlans = [
   },
 ];
 
-export const PricingPlansSection = (): JSX.Element => {
+export const PricingPlansSection = () => {
   return (
-    <section className="flex flex-col items-center gap-8 md:gap-16 px-4 md:px-8 lg:px-[100px] py-12 md:py-[120px] w-full bg-[#0b0b0f]">
+    <section className="flex flex-col items-center gap-8 md:gap-16 px-4 containerSection">
       <div className="flex flex-col items-center gap-4 md:gap-6 w-full max-w-[844px] px-4">
         <h2 className="text-3xl md:text-[length:var(--heading-bold40-font-size)] font-heading-bold40 font-[number:var(--heading-bold40-font-weight)] text-white text-center tracking-[var(--heading-bold40-letter-spacing)] leading-tight md:leading-[var(--heading-bold40-line-height)] [font-style:var(--heading-bold40-font-style)]">
           Simple, Transparent Pricing

@@ -13,6 +13,7 @@ const benefitCards = [
       top: "top-[370px]",
       left: "left-[93px]",
     },
+    image: "/images/1.png",
   },
   {
     number: "2",
@@ -23,6 +24,7 @@ const benefitCards = [
       top: "top-[232px]",
       left: "left-[523px]",
     },
+    image: "/images/2.png",
   },
   {
     number: "3",
@@ -33,6 +35,7 @@ const benefitCards = [
       top: "top-[13px]",
       left: "left-[913px]",
     },
+    image: "/images/3.png",
   },
 ];
 
@@ -52,7 +55,7 @@ const AnimatedBenefitsVector = () => {
   };
 
   return (
-    <div ref={ref} className="absolute top-[10px] left-0 w-[1130px] h-[469px]">
+    <div ref={ref} className="absolute top-[10px] left-0 w-[1400px] h-[469px]">
       <motion.svg
         viewBox="0 0 1130 469"
         className="w-full h-full"
@@ -142,8 +145,12 @@ export const ProductBenefitsSection = (): JSX.Element => {
               </div>
 
               <div className="flex flex-col items-start gap-2 flex-1">
-                <div className="text-5xl font-bold text-[#e33e90] opacity-[0.16] [font-family:'Gilroy-Bold-Bold',Helvetica] tracking-[-2px] leading-none">
-                  {card.number}
+                <div className="opacity-[0.9]">
+                  <img
+                    src={card.image}
+                    alt={`Benefit ${card.number}`}
+                    className="h-16 w-auto"
+                  />
                 </div>
 
                 <h3 className="text-sm md:text-[length:var(--heading-bold16-font-size)] font-[number:var(--heading-bold16-font-weight)] text-white leading-tight md:leading-[var(--heading-bold16-line-height)] font-heading-bold16 tracking-[var(--heading-bold16-letter-spacing)] [font-style:var(--heading-bold16-font-style)]">
@@ -159,7 +166,7 @@ export const ProductBenefitsSection = (): JSX.Element => {
         ))}
       </div>
 
-      <div className="hidden lg:block relative w-full max-w-[1200px] h-[658px] overflow-hidden">
+      <div className="hidden lg:block relative w-full max-w-[1400px] h-[658px] overflow-hidden mx-auto">
         <AnimatedBenefitsVector />
 
         <motion.div
@@ -195,32 +202,31 @@ export const ProductBenefitsSection = (): JSX.Element => {
             >
               <Card className="bg-transparent border-none shadow-none">
                 <CardContent className="p-0 relative">
-                  <motion.div
+                  <motion.img
+                    src={card.image}
+                    alt={`Benefit ${card.number}`}
                     className={`absolute ${
-                      index === 0 ? "top-0" : index === 1 ? "top-4" : "top-0"
-                    }
-                       left-[194px] w-[85px] opacity-[0.16] [font-family:'Gilroy-Bold-Bold',Helvetica] font-bold text-[#E33E90] text-[182px] tracking-[-3.64px] leading-[204px]`}
-                    initial={{  scale: 0.9 }}
-                    animate={{  scale: 1 }}
+                      index === 0 ? "top-[65px]! left-[200px]!" : index === 1 ? "top-[70px]! left-[220px]!" : "left-[200px]! top-[131px]! "
+                    }  w-auto h-auto` }
+                    initial={{ scale: 0.9 }}
+                    animate={{ scale: 1 }}
                     transition={{
                       type: "spring",
                       stiffness: 160,
                       damping: 20,
                       delay: 0.2 + index * 0.15,
                     }}
-                  >
-                    {card.number}
-                  </motion.div>
+                  />
                   <div
                     className={`flex flex-col w-[277px] items-start gap-4 absolute ${
                       index === 0
-                        ? "top-[104px]"
+                        ? "top-[104px] left-[-43px]!"
                         : index === 1
-                          ? "top-[121px]"
-                          : "top-[105px]"
+                          ? "top-[121px] left-[-33px]!"
+                          : "top-[270px]! left-[50px]!"
                     } left-px`}
                   >
-                    <h3 className="font-bold text-white text-[16px] leading-[24px] tracking-[-0.01em]">
+                    <h3 className="font-bold text-white text-[16px] leading-[24px] tracking-[-0.01em] w-[220px]">
                       {card.title}
                     </h3>
 
@@ -232,11 +238,11 @@ export const ProductBenefitsSection = (): JSX.Element => {
                   <motion.div
                     className={`absolute ${
                       index === 0
-                        ? "top-0.5"
+                        ? "top-[-8px]"
                         : index === 1
-                          ? "top-px"
-                          : "top-[7px]"
-                    } left-px w-16 h-16 flex items-center justify-center bg-[#262636] rounded-full`}
+                          ? "top-[20px] left-[-16px]!"
+                          : "top-[35px] left-[200px]!"
+                    } left-[0px] w-16 h-16 flex items-center justify-center bg-[#262636] rounded-full`}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{
