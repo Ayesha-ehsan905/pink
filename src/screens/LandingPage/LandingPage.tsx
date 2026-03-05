@@ -9,15 +9,17 @@ import { UserTestimonialsSection } from "./sections/UserTestimonialsSection/User
 
 export const LandingPage = () => {
   return (
-    <main className="flex flex-col w-full">
-      <SalesHeroSection />
-      <UserTestimonialsSection />
-       <ProblemSolutionsOverviewSection />
-      {/*<ProductBenefitsSection />
-      <PricingPlansSection />
+    <>
+      <main className="flex flex-col w-full">
+        <SalesHeroSection />
+        <UserTestimonialsSection />
+        <ProblemSolutionsOverviewSection />
+        <ProductBenefitsSection />
+        {/* <PricingPlansSection />
       <FrequentlyAskedQuestionsSection />
       <TrialOfferSection />
       <SiteFooterSection /> */}
-    </main>
+      </main>
+    </>
   );
 };
