@@ -210,7 +210,7 @@ export const ProblemSolutionsOverviewSection = () => {
   }, []);
 
   return (
-    <section className="containerSection">
+    <section className="containerSection gap-0">
       <header className="flex flex-col items-center gap-4 md:gap-6 pb-4 md:pb-8 w-full max-w-[844px] px-4">
         <h2 className="text-3xl md:text-[40px] font-bold text-white text-center">
           Do These Problems Sounds Familiar ?
@@ -270,11 +270,11 @@ export const ProblemSolutionsOverviewSection = () => {
           </div>
 
           {/* Right: sticky stacked cards (desktop only) */}
-          <div className="hidden lg:flex sticky top-[10vh] h-[90vh] w-full max-w-[726.13px] shrink-0 justify-center items-start pt-0.5">
+          <div className="hidden lg:flex sticky top-[150px] h-[90vh] w-full max-w-[726.13px] shrink-0 justify-center items-start pt-0.5">
             {problemsData.map((problem, index) => (
               <div
                 key={index}
-                className={`absolute inset-0 w-full flex justify-center items-start transition-opacity duration-300 ${
+                className={` h-[calc(100vh-150px)] absolute inset-0 w-full flex justify-center items-start transition-opacity duration-300 ${
                   index === activeIndex
                     ? "opacity-100 z-10"
                     : "opacity-0 pointer-events-none"
@@ -300,7 +300,7 @@ export const ProblemSolutionsOverviewSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center gap-2.5 pt-6 md:pt-8 w-full">
+      <div className="flex flex-col items-center justify-center gap-2.5  w-full">
         <Button
           variant="ctaPink"
           size="ctaLg"

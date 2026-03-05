@@ -13,51 +13,50 @@ const faqData = [
   },
   {
     question: "Do I need to provide credit card details to start my trial?",
-    answer: "",
+    answer:
+      "No credit card is required to start your 14-day free trial. When the trial ends, you can choose a plan and add billing details if you want to continue.",
   },
   {
     question: "What's the difference between the AI and non-AI pricing?",
-    answer: "",
+    answer:
+      "AI plans include automation features like smart follow-ups, risk detection, and deal recommendations. Non-AI plans focus on core CRM workflows without AI-driven suggestions.",
   },
   {
     question: "Can Pink3 integrate with my existing tools?",
-    answer: "",
+    answer:
+      "Yes. Pink3 connects with tools like Slack, Discord, email, and popular automation platforms so your BD activity stays in sync across your stack.",
   },
   {
     question: "Is Pink3 suitable for solo BD professionals or just teams?",
-    answer: "",
+    answer:
+      "Pink3 is designed for both. The Solopreneur plan is ideal for founder-led or solo BD, while Growth and Enterprise tiers support larger teams and complex workflows.",
   },
   {
     question: "How quickly can I get started?",
-    answer: "",
+    answer:
+      "Most teams are up and running in under an hour. You can import contacts, configure your pipeline, and start logging deals right away.",
   },
   {
     question: "What happens to my data if I don't continue after the trial?",
-    answer: "",
+    answer:
+      "If you decide not to continue, your workspace will be paused. We retain your data for a limited period so you can come back or request an export.",
   },
   {
     question: "Do you offer support during the trial?",
-    answer: "",
-  },
-  {
-    question: "What is the Ambassadors Program?",
-    answer: "",
-  },
-  {
-    question: "Can I give feedback or suggest features?",
-    answer: "",
+    answer:
+      "Yes. During your trial you’ll have access to product support and onboarding resources so you can get the most out of Pink3.",
   },
 ];
 
-export const FrequentlyAskedQuestionsSection = (): JSX.Element => {
+export const FrequentlyAskedQuestionsSection = () => {
   return (
-    <section className="flex flex-col items-center gap-8 md:gap-12 px-4 md:px-8 lg:px-[180px] py-12 md:py-[120px] w-full bg-[#0b0b0f]">
+    <section className="flex flex-col items-center gap-8 md:gap-12 px-4 containerSection">
       <div className="flex flex-col items-center gap-4 md:gap-6 w-full max-w-[844px]">
-        <h2 className="text-3xl md:text-[length:var(--heading-bold40-font-size)] font-heading-bold40 font-[number:var(--heading-bold40-font-weight)] text-white text-center tracking-[var(--heading-bold40-letter-spacing)] leading-tight md:leading-[var(--heading-bold40-line-height)] [font-style:var(--heading-bold40-font-style)]">
+        <h2 className="text-3xl md:text-[40px] font-bold text-white text-center tracking-[-0.002em] leading-[48px]">
           Frequently Asked Questions
         </h2>
 
-        <p className="max-w-[634px] text-sm md:text-[length:var(--body-reg16-font-size)] text-[#b3b3c0] text-center leading-relaxed md:leading-[var(--body-reg16-line-height)] font-body-reg16 font-[number:var(--body-reg16-font-weight)] tracking-[var(--body-reg16-letter-spacing)] [font-style:var(--body-reg16-font-style)]">
+        <p className="max-w-[634px] text-sm md:text-[16px] text-secondary text-center leading-relaxed md:leading-[24px] tracking-[-0.002em]">
           Everything you need to know about Pink3
         </p>
       </div>
@@ -72,20 +71,19 @@ export const FrequentlyAskedQuestionsSection = (): JSX.Element => {
           <AccordionItem
             key={`faq-${index}`}
             value={`item-${index}`}
-            className="border-b border-[#24242c]"
+            className="border-b border-card-border"
           >
-            <AccordionTrigger className="px-0 py-3 md:py-4 hover:no-underline [&[data-state=open]>svg]:rotate-45">
-              <span className="flex items-center text-left text-base md:text-[length:var(--heading-semibold24-font-size)] font-heading-semibold24 font-[number:var(--heading-semibold24-font-weight)] text-white tracking-[var(--heading-semibold24-letter-spacing)] leading-tight md:leading-[var(--heading-semibold24-line-height)] [font-style:var(--heading-semibold24-font-style)]">
+            <AccordionTrigger className="px-0 py-3 md:py-4">
+              <span className="flex-1 text-left text-base md:text-[24px] font-semibold text-white tracking-[-0.002em] leading-[32px]">
                 {faq.question}
               </span>
             </AccordionTrigger>
-            {faq.answer && (
-              <AccordionContent className="px-0 md:px-5 pb-4 md:pb-6 pt-0">
-                <p className="text-sm md:text-[length:var(--body-reg16-font-size)] font-body-reg16 font-[number:var(--body-reg16-font-weight)] text-[#b3b3c0] tracking-[var(--body-reg16-letter-spacing)] leading-relaxed md:leading-[var(--body-reg16-line-height)] [font-style:var(--body-reg16-font-style)]">
-                  {faq.answer}
-                </p>
-              </AccordionContent>
-            )}
+
+            <AccordionContent className="px-0 md:px-5 pb-4 md:pb-6 pt-2">
+              <p className="mt-1 text-sm md:text-base font-normal text-secondary tracking-[-0.002em] leading-relaxed md:leading-[24px]">
+                {faq.answer}
+              </p>
+            </AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>

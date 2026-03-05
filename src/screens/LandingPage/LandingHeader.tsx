@@ -36,7 +36,7 @@ export const LandingHeader = () => {
         className={`sticky top-0 z-50 hidden lg:flex flex-col w-full justify-center gap-2.5 px-4 md:px-8 lg:px-[120px] py-3 border-b transition-colors duration-300 ${
           isScrolled
             ? "border-[#262636] bg-[#10101733] backdrop-blur-[30px]"
-            : "border-transparent bg-transparent backdrop-blur-0"
+            : "py-3 border-b [border-bottom-style:solid] border-transparent [border-image:linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(255,255,255,1)_50%,rgba(255,255,255,0)_100%)_1]"
         }`}
       >
         <div className="flex w-full items-center justify-between gap-4 md:gap-8 lg:gap-12 px-0 py-3 md:py-5">

@@ -113,7 +113,7 @@ export const PricingPlansSection = () => {
         {pricingPlans.map((plan, index) => (
           <Card
             key={index}
-            className={`flex flex-col gap-6 md:gap-8 p-6 md:p-8 rounded-xl border border-solid ${plan.borderClass} bg-[linear-gradient(180deg,rgba(132,135,142,0.08)_1%,rgba(94,94,94,0.08)_100%)] relative`}
+            className={`flex h-full flex-col gap-6 md:gap-8 p-6 md:p-8 rounded-xl border border-solid ${plan.borderClass} bg-[linear-gradient(180deg,rgba(132,135,142,0.08)_1%,rgba(94,94,94,0.08)_100%)] relative`}
           >
             {plan.highlighted && (
               <Badge className="absolute top-[-14px] md:top-[-18px] left-1/2 -translate-x-1/2 bg-badge hover:bg-badge px-4 md:px-6 py-1.5 md:py-2 rounded-[999px]">
@@ -161,7 +161,7 @@ export const PricingPlansSection = () => {
               <Separator className="bg-card-border h-0.5" />
             </CardContent>
 
-            <div className="flex flex-col gap-3 md:gap-4">
+            <div className="flex flex-col gap-3 md:gap-4 flex-1">
               {plan.features.map((feature, featureIndex) => (
                 <div
                   key={featureIndex}
@@ -180,23 +180,12 @@ export const PricingPlansSection = () => {
               ))}
             </div>
 
-            {/* <Button
-              variant={plan.buttonVariant}
-              className={`w-full px-4 md:px-6 py-3 md:py-4 rounded-full ${
-                plan.buttonVariant === "default"
-                  ? "bg-[#ff2f92] hover:bg-[#ff2f92]/90 text-white"
-                  : "border-[#ff2f92] text-[#ff2f92] hover:bg-[#ff2f92]/10"
-              }`}
-            >
-              <span className="text-sm md:text-[18px] font-semibold text-center tracking-[-0.002em] leading-[24px]">
-                {plan.buttonText}
-              </span>
-            </Button> */}
-            <div className="flex flex-col items-center justify-center gap-2.5 pt-6 md:pt-8 w-full">
+            
+            <div className="mt-auto flex flex-col items-center justify-center gap-2.5 pt-6 md:pt-8 w-full">
               <Button
                 variant={plan.buttonVariant}
                 size="ctaLg"
-                className={`group flex w-fit items-center justify-center gap-2 rounded-full
+                className={`group flex w-full items-center justify-center gap-2 rounded-full
                   ${
                     plan.buttonVariant === "default"
                       ? "bg-[#ff2f92] hover:bg-[#ff2f92]/90 text-white"
