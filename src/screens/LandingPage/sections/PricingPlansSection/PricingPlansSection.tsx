@@ -180,7 +180,6 @@ export const PricingPlansSection = () => {
               ))}
             </div>
 
-            
             <div className="mt-auto flex flex-col items-center justify-center gap-2.5 pt-6 md:pt-8 w-full">
               <Button
                 variant={plan.buttonVariant}

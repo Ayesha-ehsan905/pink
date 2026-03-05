@@ -4,7 +4,7 @@ export const SalesHeroSection = () => {
   return (
     <section className="relative flex flex-col items-start gap-2.5 pt-0 pb-10 px-0 w-full ">
       <img
-        className="absolute top-[-60px] left-0 w-full h-auto object-cover"
+        className="absolute top-[-160px] left-0 w-full h-auto object-cover"
         alt="Eclipses"
         src="/images/Ellipse.png"
       />

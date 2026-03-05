@@ -19,13 +19,13 @@ export const TrialOfferSection = () => {
               </p>
             </div>
 
-            <Button 
-
-            size="ctaLg"
-            className="bg-white hover:bg-white/90 rounded-full px-6 py-3 h-auto w-full md:w-auto">
+            <Button
+              size="ctaLg"
+              className="bg-white hover:bg-white/90 rounded-full px-6 py-3 h-auto w-full md:w-auto"
+            >
               <span className="text-lg md:text-[20px] font-bold text-pink tracking-[-0.01em] leading-[28px]">
                 Start your 14 Days FreeTrial
-              </span>  
+              </span>
             </Button>
           </div>
 

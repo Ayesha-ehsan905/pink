@@ -26,7 +26,7 @@ const AccordionTrigger = React.forwardRef<
       ref={ref}
       className={cn(
         "group flex w-full items-center justify-between text-left transition-all duration-300",
-        className
+        className,
       )}
       {...props}
     >

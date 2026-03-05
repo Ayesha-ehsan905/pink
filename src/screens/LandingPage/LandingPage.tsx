@@ -6,6 +6,7 @@ import { UserTestimonialsSection } from "./sections/UserTestimonialsSection/User
 import { LandingHeader } from "./LandingHeader";
 import { FrequentlyAskedQuestionsSection } from "./sections/FrequentlyAskedQuestionsSection/FrequentlyAskedQuestionsSection";
 import { TrialOfferSection } from "./sections/TrialOfferSection/TrialOfferSection";
+import { SiteFooterSection } from "./sections/SiteFooterSection/SiteFooterSection";
 
 export const LandingPage = () => {
   return (
@@ -17,9 +18,9 @@ export const LandingPage = () => {
         <ProblemSolutionsOverviewSection />
         <ProductBenefitsSection />
         <PricingPlansSection />
-       <FrequentlyAskedQuestionsSection />
-       <TrialOfferSection />
-      {/*<SiteFooterSection /> */}
+        <FrequentlyAskedQuestionsSection />
+        <TrialOfferSection />
+        <SiteFooterSection />
       </main>
     </>
   );

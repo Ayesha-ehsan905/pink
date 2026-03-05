@@ -18,13 +18,13 @@ const footerLinks = {
   ],
 };
 
-export const SiteFooterSection = (): JSX.Element => {
+export const SiteFooterSection = ()=> {
   return (
-    <footer className="relative flex flex-col w-full items-start gap-2.5 pt-12 md:pt-20 pb-8 bg-[#0b0b0f] border-t border-[#ffffff26]">
+    <footer className="relative flex flex-col w-full items-start gap-2.5 pt-12 md:pt-20 pb-8  border-t border-[#ffffff26]">
       <img
         className="absolute left-0 bottom-[-452px] w-full h-[116px]"
         alt="Eclipses"
-        src="/eclipses-1.svg"
+        src="/images/Ellipse2.png"
       />
 
       <div className="flex flex-col items-center gap-8 md:gap-12 px-4 md:px-8 lg:px-[120px] py-0 relative w-full">
