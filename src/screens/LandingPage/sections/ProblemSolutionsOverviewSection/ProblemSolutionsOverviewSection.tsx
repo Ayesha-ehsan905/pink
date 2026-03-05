@@ -5,7 +5,7 @@ import { Separator } from "../../../../components/ui/separator";
 
 const problemsData = [
   {
-    icon: "/icon-3.svg",
+    icon: "/images/Icon.svg",
     title: "Fragmented workflows",
     description:
       "Juggling multiple tools just to manage your leads and clients",
@@ -15,10 +15,10 @@ const problemsData = [
     tags: ["Sheets", "Discord", "Telegram", "Calendar", "Email", "Looker"],
     metric: "+12 Tools To Manage",
     solutionDescription: "One unified platform for your entire BD process",
-    divIcon: "/div.svg",
+    divIcon: "/images/div.svg",
   },
   {
-    icon: "/icon-4.svg",
+    icon: "/images/Icon1.svg",
     title: "Manual Process",
     description: "Tracking everything by hand - time-consuming and error-prone",
     problemTitle: "Your Current Chaos",
@@ -27,10 +27,10 @@ const problemsData = [
     tags: ["Update leads", "Copy Data", "Check Followups", "Send Reports"],
     metric: "03 To 04 Hrs Daily",
     solutionDescription: "AI-powered automation that eliminates manual work",
-    divIcon: "/div.svg",
+    divIcon: "/images/div.svg",
   },
   {
-    icon: "/icon.svg",
+    icon: "/images/Icon2.svg",
     title: "No ROI Visibility",
     description:
       "No visibility into what's working and what's costing you conversions",
@@ -40,10 +40,10 @@ const problemsData = [
     tags: ["Conversion Rate", "Pipeline Worth", "Priority"],
     metric: "Flying Blindly",
     solutionDescription: "Clear analytics and performance insights",
-    divIcon: "/div.svg",
+    divIcon: "/images/div.svg",
   },
   {
-    icon: "/icon-1.svg",
+    icon: "/images/Icon3.svg",
     title: "No Time For Real BD",
     description: "Spending more time on admin than building partnerships",
     problemTitle: "Your Current Chaos",
@@ -52,10 +52,10 @@ const problemsData = [
     tags: ["40 hrs per week"],
     metric: "No Time For What Actually Matters",
     solutionDescription: "Save 15+ hours per week for strategic work",
-    divIcon: "/div-1.svg",
+    divIcon: "/images/div.svg",
   },
   {
-    icon: "/icon-2.svg",
+    icon: "/images/Icon4.svg",
     title: "Losing Leads Unnecessarily",
     description: "Good leads falling through due to lack of timely follow-up",
     problemTitle: "Leads You Lost",
@@ -64,7 +64,7 @@ const problemsData = [
     tags: ["Enterprise A $50 k", "Protocol B $ 80 k", "Agency C $ 120 k"],
     metric: "$ 180 K + Lost",
     solutionDescription: "AI keeps leads warm with intelligent nurturing",
-    divIcon: "/div-1.svg",
+    divIcon: "/images/div.svg",
   },
 ];
 
@@ -73,9 +73,9 @@ const CornerDecoration = ({ position }: { position: string }) => {
     position === "top-right"
       ? ""
       : position === "top-left"
-        ? "rotate-180"
+        ? "rotate-270"
         : position === "bottom-left"
-          ? "rotate-90"
+          ? "rotate-180"
           : "rotate-90";
 
   const positionClass =
@@ -91,21 +91,21 @@ const CornerDecoration = ({ position }: { position: string }) => {
     <div
       className={`absolute ${positionClass} w-[19px] h-[19px] flex flex-col gap-1 overflow-hidden ${rotationClass}`}
     >
-      <div className="ml-[0.1px] h-1 mt-[0.3px] bg-[#ff2f92] rounded-[0px_18.09px_0px_0px]" />
-      <div className="ml-[7.1px] w-5 h-1 bg-[#ff2f92] rounded-[18.09px_0px_0px_0px] rotate-90" />
+      <div className="ml-[0.1px] h-1 mt-[0.3px] bg-pink rounded-[0px_18.09px_0px_0px]" />
+      <div className="ml-[7.1px] w-5 h-1 bg-pink rounded-[18.09px_0px_0px_0px] rotate-90" />
     </div>
   );
 };
 
-export const ProblemSolutionsOverviewSection = (): JSX.Element => {
+export const ProblemSolutionsOverviewSection = () => {
   return (
-    <section className="flex flex-col items-center gap-8 md:gap-12 p-4 md:p-8 lg:p-[120px] w-full bg-[#0b0b0f]">
+    <section className="containerSection">
       <header className="flex flex-col items-center gap-4 md:gap-6 pb-4 md:pb-8 w-full max-w-[844px] px-4">
-        <h2 className="text-3xl md:text-[length:var(--heading-bold40-font-size)] font-heading-bold40 font-[number:var(--heading-bold40-font-weight)] text-white text-center tracking-[var(--heading-bold40-letter-spacing)] leading-tight md:leading-[var(--heading-bold40-line-height)] [font-style:var(--heading-bold40-font-style)]">
+        <h2 className="text-3xl md:text-[40px] font-bold text-white text-center">
           Do These Problems Sounds Familiar ?
         </h2>
 
-        <p className="max-w-[430px] text-sm md:text-[length:var(--body-reg16-font-size)] text-[#b3b3c0] text-center leading-relaxed md:leading-[var(--body-reg16-line-height)] font-body-reg16 font-[number:var(--body-reg16-font-weight)] tracking-[var(--body-reg16-letter-spacing)] [font-style:var(--body-reg16-font-style)]">
+        <p className="max-w-[430px] text-sm md:text-base text-secondary text-center leading-relaxed md:leading-[26px]">
           See yourself in these scenarios? Here&#39;s how Pink3 transforms your
           daily struggle.
         </p>
@@ -127,65 +127,65 @@ export const ProblemSolutionsOverviewSection = (): JSX.Element => {
               />
 
               <div className="flex flex-col items-start gap-2 md:gap-3 flex-1">
-                <h3 className="text-lg md:text-[length:var(--heading-semibold24-font-size)] font-[number:var(--heading-semibold24-font-weight)] text-white leading-tight md:leading-[var(--heading-semibold24-line-height)] font-heading-semibold24 tracking-[var(--heading-semibold24-letter-spacing)] [font-style:var(--heading-semibold24-font-style)]">
+                <h3 className="text-lg md:text-2xl font-semibold text-white leading-tight md:leading-[32px]">
                   {problem.title}
                 </h3>
 
-                <p className="text-sm md:text-[length:var(--body-reg16-font-size)] text-[#b3b3c0] leading-relaxed md:leading-[var(--body-reg16-line-height)] font-body-reg16 font-[number:var(--body-reg16-font-weight)] tracking-[var(--body-reg16-letter-spacing)] [font-style:var(--body-reg16-font-style)]">
+                <p className="text-sm md:text-base text-secondary leading-relaxed md:leading-[26px]">
                   {problem.description}
                 </p>
               </div>
             </div>
 
             <div className="relative w-full lg:w-[726.13px] lg:h-[512.11px] overflow-hidden lg:flex-shrink-0">
-              <div className="lg:absolute lg:top-0.5 lg:left-0.5 w-full lg:w-[723px] lg:h-[509px] flex items-center lg:border lg:border-solid lg:border-[#8a8a9a4c]">
-                <Card className="w-full lg:w-[664px] lg:h-[442px] lg:ml-[29px] rounded-xl overflow-hidden border border-solid border-[#24242c] bg-[linear-gradient(180deg,rgba(132,135,142,0.08)_1%,rgba(94,94,94,0.08)_100%)]">
+              <div className="lg:absolute lg:top-0.5 lg:left-0.5 w-full lg:w-[723px] lg:h-[509px] flex items-center lg:border lg:border-solid lg:border-card-border1">
+                <Card className="w-full lg:w-[664px] lg:h-[442px] lg:ml-[29px] rounded-xl overflow-hidden border border-solid border-card-border bg-[linear-gradient(180deg,rgba(132,135,142,0.08)_1%,rgba(94,94,94,0.08)_100%)]">
                   <CardContent className="p-4 md:p-0 flex flex-col">
                     <div className="flex flex-col items-start gap-4 md:gap-[21px] w-full md:w-[626px] md:mx-auto md:mt-5">
                       <div className="flex flex-col items-start justify-center gap-2 md:gap-[7.24px] w-full">
-                        <span className="text-xs md:text-[length:var(--button-bold14-font-size)] font-[number:var(--button-bold14-font-weight)] text-[#ff4d4f] leading-[var(--button-bold14-line-height)] font-button-bold14 tracking-[var(--button-bold14-letter-spacing)] [font-style:var(--button-bold14-font-style)]">
+                        <span className="text-xs md:text-[14px] font-bold text-error leading-[20px]">
                           Problem
                         </span>
 
                         <Separator className="h-px bg-white/10" />
 
-                        <h4 className="text-base md:text-[length:var(--body-semibold18-font-size)] font-[number:var(--body-semibold18-font-weight)] text-white leading-[var(--body-semibold18-line-height)] font-body-semibold18 tracking-[var(--body-semibold18-letter-spacing)] [font-style:var(--body-semibold18-font-style)]">
+                        <h4 className="text-base md:text-[18px] font-semibold text-white leading-[28px]">
                           {problem.problemTitle}
                         </h4>
 
-                        <p className="text-xs md:text-[length:var(--body-reg14-font-size)] text-[#b3b3c0] leading-relaxed md:leading-[var(--body-reg14-line-height)] font-body-reg14 font-[number:var(--body-reg14-font-weight)] tracking-[var(--body-reg14-letter-spacing)] [font-style:var(--body-reg14-font-style)]">
+                        <p className="text-xs md:text-[14px] text-secondary leading-relaxed md:leading-[22px] font-normal">
                           {problem.problemDescription}
                         </p>
                       </div>
 
-                      <div className="flex items-center gap-2 md:gap-3 flex-wrap w-full">
+                      <div className="flex items-center gap-2 md:gap-2 flex-wrap w-full">
                         {problem.tags.map((tag, tagIndex) => (
                           <Badge
                             key={tagIndex}
                             variant="outline"
-                            className="inline-flex items-center justify-center gap-1 md:gap-[3.62px] px-3 md:px-[21.71px] py-1 md:py-[7.24px] bg-[#280000] rounded-[903.74px] border-[0.9px] border-solid border-[#ff4d4f]"
+                            className="inline-flex items-center justify-center gap-1  px-3 md:px-[21px] py-1 md:py-[7px] bg-[#280000] rounded-[903.74px] border-[0.9px] border-solid border-error"
                           >
                             <img
-                              className="w-3 h-3 md:w-[12.67px] md:h-[12.67px]"
+                              className="w-3 h-3 "
                               alt="Danger"
-                              src="/danger.svg"
+                              src="/images/danger.svg"
                             />
-                            <span className="text-[8px] md:text-[length:var(--body-reg10-font-size)] font-body-reg10 font-[number:var(--body-reg10-font-weight)] text-[#ff4d4f] tracking-[var(--body-reg10-letter-spacing)] leading-[var(--body-reg10-line-height)] whitespace-nowrap [font-style:var(--body-reg10-font-style)]">
+                            <span className="text-[8px] md:text-[10px] text-error leading-[14px] whitespace-nowrap">
                               {tag}
                             </span>
                           </Badge>
                         ))}
                       </div>
 
-                      <p className="w-full text-[10px] md:text-[length:var(--label-medi12-font-size)] font-[number:var(--label-medi12-font-weight)] text-[#ffc857] text-center leading-[var(--label-medi12-line-height)] font-label-medi12 tracking-[var(--label-medi12-letter-spacing)] [font-style:var(--label-medi12-font-style)]">
+                      <p className="w-full text-[10px] md:text-sm font-medium text-warning text-center leading-[16px]">
                         {problem.metric}
                       </p>
                     </div>
 
                     <Separator className="md:ml-[28.4px] w-full md:w-[617px] h-px mt-4 md:mt-[19.7px] bg-white/10" />
 
-                    <div className="flex flex-col items-start gap-2 p-4 md:p-[22px] md:ml-[19.3px] w-full md:w-[626px] mt-4 md:mt-[19.9px] rounded-lg border-l-4 md:border-l-[7.24px] [border-left-style:solid] border-[#ff2f92] bg-[linear-gradient(180deg,rgba(132,135,142,0.08)_1%,rgba(94,94,94,0.08)_100%)]">
-                      <span className="text-xs md:text-[length:var(--button-bold14-font-size)] font-[number:var(--button-bold14-font-weight)] text-[#ff2f92] leading-[var(--button-bold14-line-height)] font-button-bold14 tracking-[var(--button-bold14-letter-spacing)] [font-style:var(--button-bold14-font-style)]">
+                    <div className="flex flex-col items-start gap-2 p-4 md:p-[22px] md:ml-[19.3px] w-full md:w-[626px] mt-4 md:mt-[19.9px] rounded-lg border-l-4 md:border-l-[7.24px] [border-left-style:solid] border-pink bg-[linear-gradient(180deg,rgba(132,135,142,0.08)_1%,rgba(94,94,94,0.08)_100%)]">
+                      <span className="text-xs md:text-[14px] font-bold text-pink leading-[20px]">
                         Solution
                       </span>
 
@@ -194,10 +194,10 @@ export const ProblemSolutionsOverviewSection = (): JSX.Element => {
                       <div className="flex flex-col items-start justify-center gap-2 md:gap-[10.86px] md:pl-[10.86px] md:pt-[3.62px] w-full">
                         <div className="flex items-center justify-center gap-2 md:gap-[9.05px] pt-2 md:pt-[7.24px] w-full">
                           <p className="flex-1 font-normal text-transparent text-base md:text-2xl leading-tight md:leading-6 [font-family:'DM_Sans',Helvetica] tracking-[0]">
-                            <span className="text-sm md:text-[length:var(--heading-semibold24-font-size)] font-[number:var(--heading-semibold24-font-weight)] text-white leading-[var(--heading-semibold24-line-height)] font-heading-semibold24 [font-style:var(--heading-semibold24-font-style)] tracking-[var(--heading-semibold24-letter-spacing)]">
+                            <span className="text-sm md:text-2xl font-semibold text-white leading-[32px]">
                               Single Solution Tailored for You -&nbsp;&nbsp;
                             </span>
-                            <span className="text-sm md:text-[length:var(--heading-semibold24-font-size)] font-[number:var(--heading-semibold24-font-weight)] text-[#ff2f92] leading-[var(--heading-semibold24-line-height)] font-heading-semibold24 [font-style:var(--heading-semibold24-font-style)] tracking-[var(--heading-semibold24-letter-spacing)]">
+                            <span className="text-sm md:text-2xl font-semibold text-pink leading-[32px]">
                               Pink3
                             </span>
                           </p>
@@ -209,7 +209,7 @@ export const ProblemSolutionsOverviewSection = (): JSX.Element => {
                             alt="Checkmark"
                             src={problem.divIcon}
                           />
-                          <p className="flex-1 text-sm md:text-[length:var(--body-reg16-font-size)] text-white leading-relaxed md:leading-[var(--body-reg16-line-height)] font-body-reg16 font-[number:var(--body-reg16-font-weight)] tracking-[var(--body-reg16-letter-spacing)] [font-style:var(--body-reg16-font-style)]">
+                          <p className="flex-1 text-sm md:text-base text-white leading-relaxed md:leading-[26px] font-normal">
                             {problem.solutionDescription}
                           </p>
                         </div>
@@ -231,7 +231,7 @@ export const ProblemSolutionsOverviewSection = (): JSX.Element => {
       ))}
 
       <div className="flex flex-col items-center justify-center gap-2.5 pt-6 md:pt-8 w-full">
-        <Button className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#ff2f92] rounded-[999px] hover:bg-[#ff2f92]/90 w-full max-w-[350px]">
+        <Button className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-pink rounded-[999px] hover:bg-pink/90 w-full max-w-[350px]">
           <span className="text-lg md:text-[length:var(--button-bold-24-font-size)] font-button-bold-24 font-[number:var(--button-bold-24-font-weight)] text-white text-center tracking-[var(--button-bold-24-letter-spacing)] leading-[var(--button-bold-24-line-height)] whitespace-nowrap [font-style:var(--button-bold-24-font-style)]">
             Start your 14 Days FreeTrial
           </span>
