@@ -2,6 +2,7 @@ import { Button } from "../../../../components/ui/button";
 import { Card, CardContent } from "../../../../components/ui/card";
 import { motion, useInView } from "framer-motion";
 import { useRef, type JSX } from "react";
+import { useNavigate } from "react-router-dom";
 
 const benefitCards = [
   {
@@ -118,6 +119,8 @@ const AnimatedBenefitsVector = () => {
 };
 
 export const ProductBenefitsSection = (): JSX.Element => {
+  const navigate = useNavigate();
+
   return (
     <section className="containerSection">
       {/* Mobile */}
@@ -132,7 +135,10 @@ export const ProductBenefitsSection = (): JSX.Element => {
             A comprehensive solution designed specifically for Web3 BD teams
           </p>
 
-          <Button className="px-5 py-3 bg-pink hover:bg-pink/90 rounded-full font-button-semibold16 font-[number:var(--button-semibold16-font-weight)] text-white text-[length:var(--button-semibold16-font-size)] tracking-[var(--button-semibold16-letter-spacing)] leading-[var(--button-semibold16-line-height)] [font-style:var(--button-semibold16-font-style)]">
+          <Button
+            className="px-5 py-3 bg-pink hover:bg-pink/90 rounded-full font-button-semibold16 font-[number:var(--button-semibold16-font-weight)] text-white text-[length:var(--button-semibold16-font-size)] tracking-[var(--button-semibold16-letter-spacing)] leading-[var(--button-semibold16-line-height)] [font-style:var(--button-semibold16-font-style)]"
+            onClick={() => navigate("/create-account")}
+          >
             Start Free Trial
           </Button>
         </div>
@@ -285,6 +291,7 @@ export const ProductBenefitsSection = (): JSX.Element => {
               variant="ctaPink"
               size="ctaSm"
               className="group flex w-fit items-center justify-center gap-2"
+              onClick={() => navigate("/create-account")}
             >
               <span className="font-semibold text-base leading-[24px] text-center whitespace-nowrap ">
                 Start Free Trial

@@ -6,6 +6,7 @@ import { Badge } from "../../../../components/ui/badge";
 import { Button } from "../../../../components/ui/button";
 import { Card, CardContent } from "../../../../components/ui/card";
 import { Separator } from "../../../../components/ui/separator";
+import { useNavigate } from "react-router-dom";
 
 const pricingPlans = [
   {
@@ -96,6 +97,8 @@ const pricingPlans = [
 ];
 
 export const PricingPlansSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section
       id="pricing"
@@ -193,6 +196,7 @@ export const PricingPlansSection = () => {
                       ? "bg-[#ff2f92] hover:bg-[#ff2f92]/90 text-white"
                       : "border-[#ff2f92] text-[#ff2f92] hover:bg-[#ff2f92]/10"
                   }`}
+                onClick={() => navigate("/create-account")}
               >
                 <span className="flex items-center justify-center flex-1 text-xl font-bold text-center tracking-[-0.01em] leading-[36px] ">
                   Start your 14 Days FreeTrial

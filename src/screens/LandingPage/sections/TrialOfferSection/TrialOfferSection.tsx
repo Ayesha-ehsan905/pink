@@ -1,7 +1,10 @@
 import { Button } from "../../../../components/ui/button";
 import { Card, CardContent } from "../../../../components/ui/card";
+import { useNavigate } from "react-router-dom";
 
 export const TrialOfferSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section
       id="why-pink3"
@@ -25,6 +28,7 @@ export const TrialOfferSection = () => {
             <Button
               size="ctaLg"
               className="bg-white hover:bg-white/90 rounded-full px-6 py-3 h-auto w-full md:w-auto"
+              onClick={() => navigate("/create-account")}
             >
               <span className="text-lg md:text-[20px] font-bold text-pink tracking-[-0.01em] leading-[28px]">
                 Start your 14 Days FreeTrial

@@ -3,6 +3,7 @@ import { Badge } from "../../../../components/ui/badge";
 import { Button } from "../../../../components/ui/button";
 import { Card, CardContent } from "../../../../components/ui/card";
 import { Separator } from "../../../../components/ui/separator";
+import { useNavigate } from "react-router-dom";
 
 const problemsData = [
   {
@@ -179,6 +180,7 @@ const ProblemCardContent = ({
 
 export const ProblemSolutionsOverviewSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -305,6 +307,7 @@ export const ProblemSolutionsOverviewSection = () => {
           variant="ctaPink"
           size="ctaLg"
           className="group flex w-fit items-center justify-center gap-2"
+          onClick={() => navigate("/create-account")}
         >
           <span className="flex items-center justify-center flex-1 text-xl font-bold text-center tracking-[-0.01em] leading-[36px] ">
             Start your 14 Days FreeTrial

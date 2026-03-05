@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "../../../../components/ui/button";
 import { scrollToElement } from "../../../../utils/scrollToElement";
 
@@ -15,6 +16,7 @@ const navigationItems = [
 
 export const MobileHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleNavClick = (
     event: React.MouseEvent<HTMLButtonElement>,
@@ -134,7 +136,10 @@ export const MobileHeader = () => {
                 variant="ctaPink"
                 size="ctaLg"
                 className="w-full justify-center"
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setIsOpen(false);
+                  navigate("/create-account");
+                }}
               >
                 <span className="text-base font-semibold leading-[24px]">
                   Try Pink3 Now For Free

@@ -7,6 +7,7 @@ import {
 import { MobileHeader } from "./sections/SalesHeroSection/MobileHeader";
 import { Button } from "../../components/ui/button";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { scrollToElement } from "../../utils/scrollToElement";
 
 const navigationItems = [
@@ -20,6 +21,7 @@ const navigationItems = [
 export const LandingHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -108,6 +110,7 @@ export const LandingHeader = () => {
                 ? "border border-pink bg-transparent text-pink hover:bg-pink/10"
                 : ""
             }`}
+            onClick={() => navigate("/create-account")}
           >
             <span
               className={`font-semibold text-base leading-[24px] text-center whitespace-nowrap transition-colors duration-300 ${

@@ -1,6 +1,9 @@
 import { Button } from "../../../../components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 export const SalesHeroSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="relative flex flex-col items-start gap-2.5 pt-0 pb-10 px-0 w-full ">
       <img
@@ -38,6 +41,7 @@ export const SalesHeroSection = () => {
           variant="ctaPink"
           size="ctaLg"
           className="group flex w-fit items-center justify-center gap-2"
+          onClick={() => navigate("/create-account")}
         >
           <span className="flex items-center justify-center flex-1 text-xl font-bold text-center tracking-[-0.01em] leading-[36px] ">
             Try Pink3 Now For Free
