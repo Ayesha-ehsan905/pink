@@ -301,14 +301,13 @@ export const ProblemSolutionsOverviewSection = () => {
       </div>
 
       <div className="flex flex-col items-center justify-center gap-2.5 pt-6 md:pt-8 w-full">
-        
         <Button
           variant="ctaPink"
           size="ctaLg"
           className="group flex w-fit items-center justify-center gap-2"
         >
           <span className="flex items-center justify-center flex-1 text-xl font-bold text-center tracking-[-0.01em] leading-[36px] ">
-          Start your 14 Days FreeTrial
+            Start your 14 Days FreeTrial
           </span>
         </Button>
       </div>

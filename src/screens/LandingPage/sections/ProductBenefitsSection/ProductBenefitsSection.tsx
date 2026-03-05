@@ -206,8 +206,12 @@ export const ProductBenefitsSection = (): JSX.Element => {
                     src={card.image}
                     alt={`Benefit ${card.number}`}
                     className={`absolute ${
-                      index === 0 ? "top-[65px]! left-[200px]!" : index === 1 ? "top-[70px]! left-[220px]!" : "left-[200px]! top-[131px]! "
-                    }  w-auto h-auto` }
+                      index === 0
+                        ? "top-[65px]! left-[200px]!"
+                        : index === 1
+                          ? "top-[70px]! left-[220px]!"
+                          : "left-[200px]! top-[131px]! "
+                    }  w-auto h-auto`}
                     initial={{ scale: 0.9 }}
                     animate={{ scale: 1 }}
                     transition={{
