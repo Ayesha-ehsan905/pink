@@ -1,19 +1,40 @@
 import { useState } from "react";
 import { Button } from "../../../../components/ui/button";
+import { scrollToElement } from "../../../../utils/scrollToElement";
 
 const navigationItems = [
-  { label: "Home" },
-  { label: "Client Reviews" },
-  { label: "Overview" },
-  { label: "Why Pink3" },
-  { label: "Pricing" },
-  { label: "FAQ's" },
-  { label: "Privacy Policy" },
-  { label: "Terms of Service" },
+  { label: "Home", targetId: "top" },
+  { label: "Client Reviews", targetId: "client-reviews" },
+  { label: "Overview", targetId: "problems" },
+  { label: "Why Pink3", targetId: "why-pink3" },
+  { label: "Pricing", targetId: "pricing" },
+  { label: "FAQ's", targetId: "faqs" },
+  { label: "Privacy Policy", targetId: undefined },
+  { label: "Terms of Service", targetId: undefined },
 ];
 
 export const MobileHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleNavClick = (
+    event: React.MouseEvent<HTMLButtonElement>,
+    targetId: string | undefined,
+  ) => {
+    if (!targetId) {
+      setIsOpen(false);
+      return;
+    }
+
+    if (targetId === "top") {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setIsOpen(false);
+      return;
+    }
+
+    scrollToElement(event as unknown as React.MouseEvent<HTMLElement>, targetId);
+    setIsOpen(false);
+  };
 
   return (
     <>
@@ -101,7 +122,7 @@ export const MobileHeader = () => {
                       ? "bg-pink text-white"
                       : "hover:bg-white/5"
                   }`}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(event) => handleNavClick(event, item.targetId)}
                 >
                   <span>{item.label}</span>
                 </button>

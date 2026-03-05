@@ -3,7 +3,10 @@ import { Card, CardContent } from "../../../../components/ui/card";
 
 export const TrialOfferSection = () => {
   return (
-    <section className="flex flex-col items-center gap-8 md:gap-12 containerSection">
+    <section
+      id="why-pink3"
+      className="flex flex-col items-center gap-8 md:gap-12 containerSection"
+    >
       <Card className="relative w-full  bg-pink rounded-2xl overflow-hidden border-0">
         <CardContent className="relative min-h-[300px] md:min-h-[412px] p-8 md:p-0">
           <div className="flex flex-col items-start gap-6 md:gap-10 relative md:absolute md:top-1/2 md:-translate-y-1/2 md:left-[100px] w-full md:w-[521px] z-10">

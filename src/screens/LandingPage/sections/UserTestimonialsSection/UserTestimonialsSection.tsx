@@ -164,7 +164,10 @@ export const UserTestimonialsSection = () => {
   );
 
   return (
-    <section className="flex flex-col items-center gap-8 md:gap-12 p-4 containerSection w-full bg-background">
+    <section
+      id="client-reviews"
+      className="flex flex-col items-center gap-8 md:gap-12 p-4 containerSection w-full bg-background"
+    >
       <div className="flex flex-col items-center gap-6 md:gap-8 w-full max-w-[844px] px-4">
         <h2 className="text-3xl md:text-[40px] font-bold text-primary text-center leading-tight md:leading-[56px]">
           What Our Users Say

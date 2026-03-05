@@ -7,16 +7,19 @@ import {
 import { MobileHeader } from "./sections/SalesHeroSection/MobileHeader";
 import { Button } from "../../components/ui/button";
 import { useEffect, useState } from "react";
+import { scrollToElement } from "../../utils/scrollToElement";
+
 const navigationItems = [
-  { label: "Client Reviews" },
-  { label: "Overview" },
-  { label: "Why Pink3" },
-  { label: "Pricing" },
-  { label: "FAQ's" },
+  { label: "Client Reviews", targetId: "client-reviews" },
+  { label: "Overview", targetId: "problems" },
+  { label: "Why Pink3", targetId: "why-pink3" },
+  { label: "Pricing", targetId: "pricing" },
+  { label: "FAQ's", targetId: "faqs" },
 ];
 
 export const LandingHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +29,30 @@ export const LandingHeader = () => {
     handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const sectionIds = navigationItems.map((item) => item.targetId);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.4,
+      },
+    );
+
+    sectionIds.forEach((id) => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -50,15 +77,26 @@ export const LandingHeader = () => {
 
           <NavigationMenu className="hidden lg:flex flex-1">
             <NavigationMenuList className="flex items-center justify-center gap-7">
-              {navigationItems.map((item, index) => (
-                <NavigationMenuItem key={index}>
-                  <NavigationMenuLink className="inline-flex items-center justify-center gap-1 px-4 py-2 rounded-[999px] cursor-pointer hover:bg-pink transition-colors">
-                    <span className="text-white font-medium text-[18px] leading-[28px]">
-                      {item.label}
-                    </span>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-              ))}
+              {navigationItems.map((item, index) => {
+                const isActive = activeSection === item.targetId;
+
+                return (
+                  <NavigationMenuItem key={index}>
+                    <NavigationMenuLink
+                      className={`inline-flex items-center justify-center gap-1 px-4 py-2 rounded-[999px] cursor-pointer transition-colors ${
+                        isActive
+                          ? "bg-pink text-white"
+                          : "text-white hover:bg-pink/80"
+                      }`}
+                      onClick={(event) => scrollToElement(event, item.targetId)}
+                    >
+                      <span className="font-medium text-[18px] leading-[28px]">
+                        {item.label}
+                      </span>
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+                );
+              })}
             </NavigationMenuList>
           </NavigationMenu>
 

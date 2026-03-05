@@ -1,11 +1,12 @@
 import { Separator } from "../../../../components/ui/separator";
+import { scrollToElement } from "../../../../utils/scrollToElement";
 
 const footerLinks = {
   product: [
-    { label: "Start Free Trial", href: "#" },
-    { label: "Pricing", href: "#" },
-    { label: "Why Pink3", href: "#" },
-    { label: "FAQ's", href: "#" },
+    { label: "Start Free Trial", targetId: "problems" },
+    { label: "Pricing", targetId: "pricing" },
+    { label: "Why Pink3", targetId: "why-pink3" },
+    { label: "FAQ's", targetId: "faqs" },
   ],
   support: [
     { label: "Help & Support", href: "#" },
@@ -59,13 +60,20 @@ export const SiteFooterSection = ()=> {
                 Product
               </h3>
               {footerLinks.product.map((link, index) => (
-                <a
+                <button
                   key={index}
-                  href={link.href}
-                  className="w-full text-sm md:text-base font-normal text-secondary tracking-[-0.002em] leading-relaxed md:leading-[24px] hover:text-pink transition-colors"
+                  type="button"
+                  onClick={(event) =>
+                    link.targetId &&
+                    scrollToElement(
+                      event as unknown as React.MouseEvent<HTMLElement>,
+                      link.targetId,
+                    )
+                  }
+                  className="w-full text-left text-sm md:text-base font-normal text-secondary tracking-[-0.002em] leading-relaxed md:leading-[24px] hover:text-pink transition-colors bg-transparent"
                 >
                   {link.label}
-                </a>
+                </button>
               ))}
             </nav>
 

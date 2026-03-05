@@ -210,7 +210,7 @@ export const ProblemSolutionsOverviewSection = () => {
   }, []);
 
   return (
-    <section className="containerSection gap-0">
+    <section id="problems" className="containerSection gap-0">
       <header className="flex flex-col items-center gap-4 md:gap-6 pb-4 md:pb-8 w-full max-w-[844px] px-4">
         <h2 className="text-3xl md:text-[40px] font-bold text-white text-center">
           Do These Problems Sounds Familiar ?

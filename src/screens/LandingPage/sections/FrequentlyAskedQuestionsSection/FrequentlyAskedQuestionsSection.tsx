@@ -50,7 +50,10 @@ const faqData = [
 
 export const FrequentlyAskedQuestionsSection = () => {
   return (
-    <section className="flex flex-col items-center gap-8 md:gap-12 px-4 containerSection">
+    <section
+      id="faqs"
+      className="flex flex-col items-center gap-8 md:gap-12 px-4 containerSection"
+    >
       <div className="flex flex-col items-center gap-4 md:gap-6 w-full max-w-[844px]">
         <h2 className="text-3xl md:text-[40px] font-bold text-white text-center tracking-[-0.002em] leading-[48px]">
           Frequently Asked Questions
