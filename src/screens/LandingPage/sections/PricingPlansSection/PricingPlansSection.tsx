@@ -1,6 +1,6 @@
 import {
   CircleCheck as CheckCircle2Icon,
-  Circle as XCircleIcon,
+  CircleX as XCircleIcon,
 } from "lucide-react";
 import { Badge } from "../../../../components/ui/badge";
 import { Button } from "../../../../components/ui/button";
@@ -34,7 +34,7 @@ const pricingPlans = [
     buttonText: "Start your 14 Days FreeTrial",
     buttonVariant: "outline" as const,
     highlighted: false,
-    borderClass: "border-[#24242c]",
+    borderClass: "border-card-border",
   },
   {
     name: "Growth",
@@ -91,7 +91,7 @@ const pricingPlans = [
     buttonText: "Start your 14 Days FreeTrial",
     buttonVariant: "outline" as const,
     highlighted: false,
-    borderClass: "border-[#24242c]",
+    borderClass: "border-card-border",
   },
 ];
 
@@ -99,11 +99,11 @@ export const PricingPlansSection = () => {
   return (
     <section className="flex flex-col items-center gap-8 md:gap-16 px-4 containerSection">
       <div className="flex flex-col items-center gap-4 md:gap-6 w-full max-w-[844px] px-4">
-        <h2 className="text-3xl md:text-[length:var(--heading-bold40-font-size)] font-heading-bold40 font-[number:var(--heading-bold40-font-weight)] text-white text-center tracking-[var(--heading-bold40-letter-spacing)] leading-tight md:leading-[var(--heading-bold40-line-height)] [font-style:var(--heading-bold40-font-style)]">
+        <h2 className="text-3xl md:text-[40px] font-bold text-white text-center tracking-[-0.002em] leading-[48px]">
           Simple, Transparent Pricing
         </h2>
 
-        <p className="max-w-[518px] text-sm md:text-[length:var(--body-reg16-font-size)] text-[#b3b3c0] text-center leading-relaxed md:leading-[var(--body-reg16-line-height)] font-body-reg16 font-[number:var(--body-reg16-font-weight)] tracking-[var(--body-reg16-letter-spacing)] [font-style:var(--body-reg16-font-style)]">
+        <p className="max-w-[518px] text-sm md:text-[16px] text-secondary text-center leading-relaxed md:leading-[24px] tracking-[-0.002em]">
           Choose the plan that fits your needs. All plans include a 14-day free
           trial with full access.
         </p>
@@ -116,8 +116,8 @@ export const PricingPlansSection = () => {
             className={`flex flex-col gap-6 md:gap-8 p-6 md:p-8 rounded-xl border border-solid ${plan.borderClass} bg-[linear-gradient(180deg,rgba(132,135,142,0.08)_1%,rgba(94,94,94,0.08)_100%)] relative`}
           >
             {plan.highlighted && (
-              <Badge className="absolute top-[-14px] md:top-[-18px] left-1/2 -translate-x-1/2 bg-[#ff077d] hover:bg-[#ff077d] px-4 md:px-6 py-1.5 md:py-2 rounded-[999px]">
-                <span className="text-xs md:text-[length:var(--heading-bold16-font-size)] font-heading-bold16 font-[number:var(--heading-bold16-font-weight)] text-white tracking-[var(--heading-bold16-letter-spacing)] leading-[var(--heading-bold16-line-height)] [font-style:var(--heading-bold16-font-style)]">
+              <Badge className="absolute top-[-14px] md:top-[-18px] left-1/2 -translate-x-1/2 bg-badge hover:bg-badge px-4 md:px-6 py-1.5 md:py-2 rounded-[999px]">
+                <span className="text-xs md:text-[16px] font-bold text-white tracking-[-0.002em] leading-[24px]">
                   MOST POPULAR
                 </span>
               </Badge>
@@ -125,40 +125,40 @@ export const PricingPlansSection = () => {
 
             <CardContent className="flex flex-col gap-3 md:gap-4 p-0 pt-2 md:pt-3">
               <div className="flex flex-col gap-1">
-                <h3 className="text-2xl md:text-[length:var(--heading-bold32-font-size)] font-heading-bold32 font-[number:var(--heading-bold32-font-weight)] text-white tracking-[var(--heading-bold32-letter-spacing)] leading-tight md:leading-[var(--heading-bold32-line-height)] [font-style:var(--heading-bold32-font-style)]">
+                <h3 className="text-2xl md:text-3xl font-bold text-white tracking-[-0.002em] leading-[40px]">
                   {plan.name}
                 </h3>
 
-                <p className="text-sm md:text-[length:var(--body-reg16-font-size)] font-body-reg16 font-[number:var(--body-reg16-font-weight)] text-[#b3b3c0] tracking-[var(--body-reg16-letter-spacing)] leading-relaxed md:leading-[var(--body-reg16-line-height)] [font-style:var(--body-reg16-font-style)]">
+                <p className="text-sm md:text-base font-normal text-secondary tracking-[-0.002em] leading-relaxed md:leading-[24px]">
                   {plan.description}
                 </p>
               </div>
 
-              <Separator className="bg-[#24242c] h-0.5" />
+              <Separator className="bg-card-border h-0.5" />
 
               <div className="flex flex-col gap-1">
                 <div className="flex items-end gap-2">
-                  <span className="text-3xl md:text-[length:var(--display-semibold40-font-size)] font-display-semibold40 font-[number:var(--display-semibold40-font-weight)] text-white text-center tracking-[var(--display-semibold40-letter-spacing)] leading-[var(--display-semibold40-line-height)] whitespace-nowrap [font-style:var(--display-semibold40-font-style)]">
+                  <span className="text-3xl md:text-[40px] font-semibold text-white text-center tracking-[-0.002em] leading-[48px] whitespace-nowrap">
                     {plan.price}
                   </span>
 
-                  <span className="text-sm md:text-[length:var(--body-reg16-font-size)] font-body-reg16 font-[number:var(--body-reg16-font-weight)] text-[#b3b3c0] text-center tracking-[var(--body-reg16-letter-spacing)] leading-[var(--body-reg16-line-height)] whitespace-nowrap [font-style:var(--body-reg16-font-style)]">
+                  <span className="text-sm md:text-base font-normal text-secondary text-center tracking-[-0.002em] leading-[24px] whitespace-nowrap">
                     {plan.period}
                   </span>
                 </div>
 
-                <p className="text-sm md:text-[length:var(--body-reg16-font-size)] font-body-reg16 font-[number:var(--body-reg16-font-weight)] text-[#ff2f92] tracking-[var(--body-reg16-letter-spacing)] leading-[var(--body-reg16-line-height)] [font-style:var(--body-reg16-font-style)]">
+                <p className="text-sm md:text-[16px] font-normal text-pink tracking-[-0.002em] leading-[24px]">
                   {plan.annualPrice}
                 </p>
               </div>
 
-              <Separator className="bg-[#24242c] h-0.5" />
+              <Separator className="bg-card-border h-0.5" />
 
-              <p className="text-sm md:text-[length:var(--body-reg16-font-size)] font-body-reg16 font-[number:var(--body-reg16-font-weight)] text-white tracking-[var(--body-reg16-letter-spacing)] leading-relaxed md:leading-[var(--body-reg16-line-height)] [font-style:var(--body-reg16-font-style)]">
+              <p className="text-sm md:text-base font-normal text-white tracking-[-0.002em] leading-relaxed md:leading-[24px]">
                 {plan.tagline}
               </p>
 
-              <Separator className="bg-[#24242c] h-0.5" />
+              <Separator className="bg-card-border h-0.5" />
             </CardContent>
 
             <div className="flex flex-col gap-3 md:gap-4">
@@ -168,30 +168,46 @@ export const PricingPlansSection = () => {
                   className="flex items-start gap-2 md:gap-3"
                 >
                   {feature.included ? (
-                    <CheckCircle2Icon className="w-4 h-4 md:w-5 md:h-5 text-white flex-shrink-0 mt-0.5" />
+                    <CheckCircle2Icon className="w-4 h-4 md:w-5 md:h-5 text-[#3DFFB3] shrink-0 mt-0.5" />
                   ) : (
-                    <XCircleIcon className="w-4 h-4 md:w-5 md:h-5 text-white flex-shrink-0 mt-0.5" />
+                    <XCircleIcon className="w-4 h-4 md:w-5 md:h-5 text-error shrink-0 mt-0.5" />
                   )}
 
-                  <span className="flex-1 text-sm md:text-[length:var(--body-reg16-font-size)] font-body-reg16 font-[number:var(--body-reg16-font-weight)] text-white tracking-[var(--body-reg16-letter-spacing)] leading-relaxed md:leading-[var(--body-reg16-line-height)] [font-style:var(--body-reg16-font-style)]">
+                  <span className="flex-1 text-sm md:text-[18px] font-normal text-white tracking-[-0.002em] leading-relaxed md:leading-[24px]">
                     {feature.text}
                   </span>
                 </div>
               ))}
             </div>
 
-            <Button
+            {/* <Button
               variant={plan.buttonVariant}
-              className={`w-full px-4 md:px-6 py-3 md:py-4 rounded-[999px] ${
+              className={`w-full px-4 md:px-6 py-3 md:py-4 rounded-full ${
                 plan.buttonVariant === "default"
                   ? "bg-[#ff2f92] hover:bg-[#ff2f92]/90 text-white"
                   : "border-[#ff2f92] text-[#ff2f92] hover:bg-[#ff2f92]/10"
               }`}
             >
-              <span className="text-sm md:text-[length:var(--body-semibold18-font-size)] font-body-semibold18 font-[number:var(--body-semibold18-font-weight)] text-center tracking-[var(--body-semibold18-letter-spacing)] leading-[var(--body-semibold18-line-height)] [font-style:var(--body-semibold18-font-style)]">
+              <span className="text-sm md:text-[18px] font-semibold text-center tracking-[-0.002em] leading-[24px]">
                 {plan.buttonText}
               </span>
-            </Button>
+            </Button> */}
+            <div className="flex flex-col items-center justify-center gap-2.5 pt-6 md:pt-8 w-full">
+              <Button
+                variant={plan.buttonVariant}
+                size="ctaLg"
+                className={`group flex w-fit items-center justify-center gap-2 rounded-full
+                  ${
+                    plan.buttonVariant === "default"
+                      ? "bg-[#ff2f92] hover:bg-[#ff2f92]/90 text-white"
+                      : "border-[#ff2f92] text-[#ff2f92] hover:bg-[#ff2f92]/10"
+                  }`}
+              >
+                <span className="flex items-center justify-center flex-1 text-xl font-bold text-center tracking-[-0.01em] leading-[36px] ">
+                  Start your 14 Days FreeTrial
+                </span>
+              </Button>
+            </div>
           </Card>
         ))}
       </div>

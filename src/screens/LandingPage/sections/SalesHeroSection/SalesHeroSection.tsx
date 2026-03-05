@@ -1,19 +1,4 @@
 import { Button } from "../../../../components/ui/button";
-import { MobileHeader } from "./MobileHeader";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from "../../../../components/ui/navigation-menu";
-
-const navigationItems = [
-  { label: "Client Reviews" },
-  { label: "Overview" },
-  { label: "Why Pink3" },
-  { label: "Pricing" },
-  { label: "FAQ's" },
-];
 
 export const SalesHeroSection = () => {
   return (
@@ -29,44 +14,6 @@ export const SalesHeroSection = () => {
         alt="Pattern"
         src="/images/HeroSectionBg.png"
       />
-
-      <MobileHeader />
-
-      <header className="relative hidden lg:flex flex-col w-full justify-center gap-2.5 px-4 md:px-8 lg:px-[120px] py-3 border-b [border-bottom-style:solid] border-transparent [border-image:linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(255,255,255,1)_50%,rgba(255,255,255,0)_100%)_1]">
-        <div className="flex w-full items-center justify-between gap-4 md:gap-8 lg:gap-12 px-0 py-3 md:py-5">
-          <div className="inline-flex items-center gap-2 md:gap-3">
-            <img
-              className="w-full h-full"
-              alt="Pink3 Logo"
-              src="/images/Logo.png"
-            />
-          </div>
-
-          <NavigationMenu className="hidden lg:flex flex-1">
-            <NavigationMenuList className="flex items-center justify-center gap-7">
-              {navigationItems.map((item, index) => (
-                <NavigationMenuItem key={index}>
-                  <NavigationMenuLink className="inline-flex items-center justify-center gap-1 px-4 py-2 rounded-[999px] cursor-pointer hover:bg-pink transition-colors">
-                    <span className=" text-white font-medium text-[18px] leading-[28px]  ">
-                      {item.label}
-                    </span>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
-
-          <Button
-            variant="ctaPink"
-            size="ctaSm"
-            className="group inline-flex items-center justify-center gap-2"
-          >
-            <span className=" font-semibold text-base leading-[24px] text-center whitespace-nowrap ">
-              Start Free Trial
-            </span>
-          </Button>
-        </div>
-      </header>
 
       <div className="relative flex flex-col gap-8 md:gap-14 px-4 md:px-8 lg:px-[120px] py-0 w-full items-center">
         <div className="flex flex-col items-center justify-center gap-12 md:gap-[72px]  px-0 w-full">
